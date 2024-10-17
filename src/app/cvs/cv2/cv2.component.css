@@ -1,0 +1,188 @@
+*{
+    --cv-color-1: #436975;
+    --cv-color-2:rgb(158, 60, 60);
+    --cv-color-3: rgb(188, 201, 65);
+    --cv-color-4: rgb(65, 158, 60);
+    --cv-color-5: rgb(54, 214, 158);
+    --cv-color-6: rgb(54, 185, 214);
+    --cv-color-7: rgb(59, 53, 149);
+    --cv-color-8: rgb(214, 54, 209);
+    --cv-color-9: rgb(214, 54, 142);
+    --cv-color-10: rgb(214, 54, 54);
+    --cv-color-11: rgb(251, 124, 124);
+    --cv-color-12: rgb(112, 105, 133);
+    box-sizing: border-box;
+}
+
+.item{
+    position: absolute;
+    height: 500px;
+    width: 380px;
+    display: inline-block;
+    transform: translate(10px,10px);
+}
+
+.cv-2 {
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 0 8px 0 black;
+    z-index: 999;
+    display: block;
+    overflow: hidden;
+    background-image: url(../../../assets/cvs/cv11new.jpg);
+    background-size: cover;
+
+
+}
+
+.cv-2 .top img {
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    right: 15px;
+    top: 10px;
+    position: absolute;
+}
+
+
+.cv-2 .top {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 90px;
+    background-color: var(--cv-color-1);
+    background-image: url(../../../assets/texture.png) !important;
+    padding: 10px 15px;
+}
+
+.cv-2 .top p{
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    display: inline;
+}
+
+.cv-2 .top > div {
+    width: 100px;
+    margin: 0;
+}
+
+.cv-2 .top > div>p{
+    color: white;
+    font-size: 10px;
+    display: inline;
+}
+
+.cv-2 .personel-info {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 45px;
+    display: flex;
+    background-color: black;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cv-2 .personel-info >div {
+    width: 50% ;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.cv-2 .personel-info >div>img {
+    width: 15px ;
+    height: 15px;
+    
+}
+
+.cv-2 .personel-info >div>p {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
+    
+}
+
+.bottom-cv-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 73%;
+    width: 100%;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.bottom-cv-2 > div {
+    height: calc(100%/4);
+    width: 100%;
+}
+.bottom-cv-2 > .skills {
+    height: calc(100%/6);
+    width: 100%;
+}
+
+.bottom-cv-2 > div >h1 {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.bottom-cv-2 > div >p {
+    font-size: 8px;
+}
+
+.bottom-cv-2 .skills > div {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.bottom-cv-2 .skills > div >div {
+    width: 150px;
+    border-radius: 5px;
+    background-color: var(--cv-color-1);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.bottom-cv-2 .skills > div >div> .input>input {
+    transform: scale(0.3);
+
+}
+.bottom-cv-2 .skills > div >div> .input {
+    width: calc(100%/3);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bottom-cv-2 .skills > div >div>.type {
+    text-transform: lowercase;
+    font-size: 8px;
+}

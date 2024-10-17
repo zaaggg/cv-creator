@@ -1,0 +1,223 @@
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    --main-font:'system-ui';
+    --main-color:#104c98;
+    --second-color:#18a0db;
+}
+
+.alert-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+/* Start footer  */
+footer {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-color:#104c98;
+    background-image: url(../../assets/bg-footer.png);
+    background-size: 100% 200%; 
+    z-index: 998;
+    overflow: hidden;
+}
+
+footer .right {
+    position: absolute;
+    right: 0;
+    top:0 ;
+    width: 50%;
+    height: 100%;
+}
+
+footer .right .contact {
+    color: #F2F2F2;
+    font-weight: 100;
+    margin-left: 10px;
+    font-size: 4vh;
+}
+
+footer .right fieldset {
+    width: 45vw;
+    height: calc(100%/9) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 10px;
+    border: 1px solid var(--second-color);
+}
+
+
+footer .right fieldset:hover {
+    border: 1px solid var(--main-color);
+}
+
+footer .right fieldset:last-of-type {
+    height: calc(100%/3);
+}
+
+footer .right fieldset legend{
+    color: var(--second-color);
+    margin-left: 10px;
+    padding: 0 5px;
+    border-radius: 2.5px;
+}
+
+footer .right fieldset:hover legend {
+    background-color: #0002;
+}
+
+footer .right fieldset input , footer .right fieldset textarea {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 3px 15px 8px;
+    font-size: 18px;
+    color: white;
+    resize: none;
+    text-transform: lowercase;
+}
+
+footer .right div > input {
+    width: 45vw;
+    height: 100% ;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    color: #F2F2F2;
+    font-size: 3vh;
+    background: none;
+    border: 2px solid var(--second-color);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+footer .right div > input:focus,footer .right div > input:active {
+    background-color: transparent;
+}
+
+.done {
+    height: calc(100%/8);
+    position: absolute;
+    display: inline-block;
+    margin-top: 20px;
+    bottom: 20px;
+}
+
+.done::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    background-color: var(--second-color);    
+    transition: .5s;
+}
+
+div:hover::before {
+    width: 100%;
+}
+
+footer .left {
+    position: absolute;
+    left: 0;
+    top:0 ;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .left > div {
+    width: 55%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .left > div:last-child {
+    height: 45%;
+
+}
+
+footer .left > div > div{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+footer .left > div > div:first-child{
+    height: 100%;
+}
+
+footer .left > div > div img{
+    width: 70px;
+}
+
+footer .left > div > div h1{
+    font-size: 2vw;
+    color: var(--second-color);
+    font-weight: 400;
+    height: 1vh;
+}
+
+footer .left > div > div p{
+    font-size: 1vw;
+    color: white;
+    font-weight: 400;
+    height: 1vh;
+    width: 17vw;
+}
+
+footer .left > div > div p b{
+    font-size: 1.2vw;
+    color: white;
+    font-weight: 600;
+
+}
+
+footer .left > div > div p a{
+    text-decoration: none;
+    color: white;
+    
+}
+/* End footer  */
+
+/* Start copyright */
+.copyright {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-color);
+    z-index: 99;
+    
+}
+.copyright p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d8d8d8;
+    width: 290px;
+}
+/* End copyright */

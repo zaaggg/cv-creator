@@ -1,0 +1,144 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.top-div {
+    position:fixed;
+    background-color:#104c98;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+    z-index: 11;
+    transform: translateY(-100%);
+
+    transition: all .5s;
+}
+
+body:hover .top-div {
+    transform: translateY(0%);
+
+}
+
+body:hover .second-div {
+    top: 30px;
+
+}
+
+.top-div-table {
+    position: absolute;
+    height: 100%;
+    width: 386px;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 0px;
+    border-color: grey;
+    padding-left: 100px;
+
+}
+
+.top-div-table-td1 {
+    width: 35px;
+    height: 28px;
+    text-align: center;
+    transition:all cubic-bezier(0.2, 0.16, 1, -0.07) .5s;
+
+}
+
+#facebook:hover  {
+background-color: rgba(255, 255, 240, 0.144);
+}
+
+#twitter:hover  {
+    background-color: rgb(55, 142, 214);
+}
+
+#google:hover  {
+    background-color: rgb(255, 72, 0);
+}
+
+#linkedin:hover  {
+    background-color: rgba(26, 120, 243, 0.582);
+}
+.second-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 1px 4px 1px #0000004d;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 10;
+    overflow: visible;
+        transition: all .5s;
+
+}
+
+.logo {
+    position: relative;
+    left: 90px;
+    top: -1px;
+    height: 101%;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 55px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.second-div a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.second-div a:hover{
+    border-bottom:5px solid #18a0db ;
+}
+
+.second-div a[routerLink="main"] {
+    border-bottom:none ;
+
+}
+
+.second-div  a {
+    color: black;
+    text-decoration: none;
+    font-weight: 100;
+} 
+
+.second-div .num {
+    color: #18a0db ;
+    font-weight:800;
+    font-size: 1.2vw;
+    width: 18vw;
+    letter-spacing: 1px;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.second-div .num img {
+    vertical-align: middle;
+    padding-bottom:5px ;
+}
+
+

@@ -1,0 +1,14 @@
+
+<div class="container" (click)="handleBackgroundClick($event)"  >
+    <div class="top-bar">
+      <div class="search">
+        <input type="search" placeholder="Search with Skills" [(ngModel)]="skillTitle">
+        <button (click)="search()"></button>
+      </div>
+    </div>
+    <div class="list">
+      <div class="image-container" *ngFor="let image of images; let i = index">
+        <img [id]="'cv-' + i" class="cv" [class.scaled]="image.scaled" [class.active]="activeIndex === i" (click)="handleImageClick(i)" [src]="image.src" alt="">
+      </div>
+    </div>
+  </div>

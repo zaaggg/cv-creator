@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family:monospace; 
+}
+
+/* Strat scrollbar */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-right: solid 2px #104c98;
+    background: #104c98;
+    border-radius: 15%;
+}
+::-webkit-scrollbar-track {
+    border: none;
+    background: transparent;
+}
+
+/* End scrollbar */

@@ -1,0 +1,281 @@
+*{
+    
+    --cv-color-1: #436975;
+    --cv-color-2:rgb(158, 60, 60);
+    --cv-color-3: rgb(188, 201, 65);
+    --cv-color-4: rgb(65, 158, 60);
+    --cv-color-5: rgb(54, 214, 158);
+    --cv-color-6: rgb(54, 185, 214);
+    --cv-color-7: rgb(59, 53, 149);
+    --cv-color-8: rgb(214, 54, 209);
+    --cv-color-9: rgb(214, 54, 142);
+    --cv-color-10: rgb(214, 54, 54);
+    --cv-color-11: rgb(251, 124, 124);
+    --cv-color-12: rgb(112, 105, 133); 
+    font-family:monospace; 
+}
+
+.number {
+    position: absolute;
+    top:100px;
+    left:50%;
+    width: 40vw;
+    height: 10vh;
+    transform: translateX(-100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.number > div {
+    width: 12vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(169, 169, 169);
+    cursor: pointer;
+    font-size: 1vw;
+    
+}
+
+.number .active {
+    color: black;
+}
+
+.number > ._ {
+    width: 4vw;
+}
+
+.number > div .cercle{
+    background-color: rgb(169, 169, 169);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.number .active .cercle {
+    background-color: #104c98;
+}
+
+.container > div[data-aos="zoom-out"]{
+    right: 50%;
+    top: 20%;
+    position: absolute;
+}
+
+.cv {
+    animation: floating 8s linear infinite;
+    z-index: 9;
+    width: 10%;
+    background-image: url(../../assets/cvs/CV.jpg);
+
+}
+
+@keyframes floating {
+    0%{
+        transform: translate(0px,0px);
+    }
+    25%{
+        transform: translate(10px,5px);
+    }
+    50%{
+        transform: translate(0px,10px);
+    }
+    75%{
+        transform: translate(-10px,5px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+
+.background-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40vw;
+    height: 100%;
+    background-image: url(../../assets/login/bgBlur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+
+.num {
+    position: absolute;
+    left: 40px;
+    top: 150px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.325);
+    cursor: default;
+
+}
+
+.num input {
+    cursor: default;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.325);
+
+}
+
+.name {
+    position: absolute;
+    left: 40px;
+    top: 200px;
+}
+
+.name input {
+    cursor: default;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: black;
+}
+
+.disc {
+    position: absolute;
+    left: 40px;
+    top: 270px;
+    width: 400px;
+    color: black;
+    font-size: 15px;
+    cursor: default;
+
+}
+
+.color {
+    position: absolute;
+    left: 40px;
+    top: 370px;
+}
+
+.color p {
+    font-size: 18px;
+}
+.color .box-color {
+    border: 0.5px solid rgba(0, 0, 0, 0.204);
+    height: 120px;
+    width: 350px;
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.color .box-color .lit-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.241);
+    position: relative;
+    transition: all 0.25s;
+}
+
+.color .box-color .lit-box img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    transition: all 0.25s;
+
+}
+.color .box-color .lit-box:hover {
+    transform: scale(1.1);
+}
+
+.color .box-color .lit-box:hover img,.color .box-color .lit-box:focus img {
+    display: block;
+}
+.c1 {
+    background-color: var(--cv-color-1);
+}
+.c2 {
+    background-color: var(--cv-color-2);
+}
+.c3 {
+    background-color: var(--cv-color-3);
+}
+.c4 {
+    background-color: var(--cv-color-4);
+}
+.c5 {
+    background-color: var(--cv-color-5);
+}
+.c6 {
+    background-color: var(--cv-color-6);
+}
+.c7 {
+    background-color: var(--cv-color-7);
+}
+.c8 {
+    background-color: var(--cv-color-8);
+}
+.c9 {
+    background-color: var(--cv-color-9);
+}
+.c10 {
+    background-color: var(--cv-color-10);
+}
+.c11 {
+    background-color: var(--cv-color-11);
+}
+.c12 {
+    background-color: var(--cv-color-12);
+}
+
+.container .create {
+    width: 15vw;
+    height: 8vh;
+    background-color: #104c98;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    font-size: 1vw;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 10vh;
+    left: 50px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.container .create::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 0%;
+    background-color: #18a0db;
+    border-radius: 50px;
+    z-index:-1;
+    transition: all .25s linear;
+
+}
+.container .create:hover::before{
+    width: 100%;
+}
+
+
+
+
+
+
+
+

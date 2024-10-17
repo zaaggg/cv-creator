@@ -1,0 +1,21 @@
+<div class="general">
+    <div class="container">
+        <div class="top_cont">
+            <h1><b>W</b>elcome to CV creator</h1>
+            <p>Login to your Account</p>
+            <a id="btn">Create Account</a>
+        </div>
+        <div class="form">
+            <div class="email"><input type="email" placeholder="Email ID" [(ngModel)]="loginEmail"></div>
+            <div class="password"> <input type="password" placeholder="Password" [(ngModel)]="loginPassword"></div>
+            <div class="forget">
+              <div class="remember">{{this.errorMessage}}</div>
+                <a href="#">Forget Password ?</a>
+            </div>
+        </div>
+        <div class="loginbtn">
+            <input  type="button" value="LOGIN" (click)="login()">
+            
+        </div>
+
+</div>

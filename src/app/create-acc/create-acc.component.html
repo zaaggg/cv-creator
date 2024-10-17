@@ -1,0 +1,22 @@
+<div class="general">
+    <div class="container">
+        <div class="top_cont">
+            <h1><b>W</b>elcome to CV creator</h1>
+            <p>Create your Account</p>
+            <a id="btn"><img src="../../assets/login/back.png" width="50px"></a>
+        </div>
+        <div class="form">
+            <div class="name"><input type="text" placeholder="Name" [(ngModel)]="AccountAdded.firstName"></div>
+            <div class="last_name"> <input type="text" placeholder="Last Name" [(ngModel)]="AccountAdded.lastName"></div>
+            <div class="email"><input type="email" placeholder="Email ID" [(ngModel)]="AccountAdded.email"></div>
+            <div class="password"> <input type="password" placeholder="Password" [(ngModel)]="AccountAdded.password"></div>
+            <div class="password"> <input type="password" placeholder="Confirme Password" [(ngModel)]="AccountAdded.password"></div>
+            <div class="remember">{{this.invalidEmail}}</div>
+
+        </div>
+        <div class="loginbtn">
+            <input  type="button" value="SIGN UP" (click)="createAccount()">
+        </div>
+
+</div>
+

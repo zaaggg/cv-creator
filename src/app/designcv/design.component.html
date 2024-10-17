@@ -1,0 +1,83 @@
+<div class="general">
+    <div class="container">
+        <div class="number">
+            <div class="1 ">
+                <div class="cercle">1</div>
+                <div class="para" id="retour1">Choose template</div>
+            </div>
+            <div class="_">-----</div>
+            <div class="2 active">
+                <div class="cercle">2</div>
+                <div class="para">Choose color</div>
+            </div>
+            <div class="_">-----</div>
+            <div class="3">
+                <div class="cercle">3</div>
+                <div class="para">Enter your details</div>
+            </div>
+        </div>
+        <div data-aos="zoom-out">
+            <div class="cv">
+                <ng-container *ngIf="id === 0">
+                    <div class="cv1"></div>
+                  </ng-container>
+                  <ng-container *ngIf="id === 1">
+                    <div class="cv2"></div>
+                  </ng-container> 
+                  <ng-container *ngIf="id === 2">
+                    <div class="cv3"></div>
+                  </ng-container> 
+                  <ng-container *ngIf="id >2 ">
+                    <div class="cv1"></div>
+                  </ng-container> 
+            </div>
+        </div>
+        <div class="background-right"></div>
+
+        <div class="num"  >{{this.id+1}}/10</div>
+        <div class="name"><input type="submit" [value]="_StyleService.title[this.id]"></div>
+        <div class="disc">{{_StyleService.desc[this.id]}}</div>
+        <div class="color">
+            <p>COLOR :</p>
+            <div class="box-color">
+                <button class="lit-box c1" (click)="onClick('var(--cv-color-1)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c2" (click)="onClick('var(--cv-color-2)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c3" (click)="onClick('var(--cv-color-3)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c4" (click)="onClick('var(--cv-color-4)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c5" (click)="onClick('var(--cv-color-5)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c6" (click)="onClick('var(--cv-color-6)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c7" (click)="onClick('var(--cv-color-7)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c8" (click)="onClick('var(--cv-color-8)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c9" (click)="onClick('var(--cv-color-9)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c10" (click)="onClick('var(--cv-color-10)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c11" (click)="onClick('var(--cv-color-11)')">
+                    <img src="../../assets/check.png">
+                </button>
+                <button class="lit-box c12" (click)="onClick('var(--cv-color-12)')">
+                    <img src="../../assets/check.png">
+                </button>
+            </div>
+        </div>
+        <button [routerLink]="['/create',this.id]"class="create colorcv">Select this Color</button>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<body>
+
+        <div class="top-div">
+            <table class="top-div-table">
+                <tr>
+                    <td class="top-div-table-td1" id="facebook"><a title="Facebook" href="https://www.facebook.com/wael.mnsr.5" target="blank"><img src="../../assets/facebook.png" width="9.1" height="17.95"></a></td>
+                    <td class="top-div-table-td1" id="twitter"><a title="Twitter" href="https://twitter.com/_W3El_" target="blank"><img src="../../assets/twitter.png" width="16px" height="16.8"></a></td>
+                    <td class="top-div-table-td1" id="google"><a title="google+" href="mailto:waelmnsr2003@gmail.com" target="blank"><img src="../../assets/google+.png" width="25px" height="16.8"></a></td>
+                    <td class="top-div-table-td1" id="linkedin"><a title="linkedin" href="https://www.google.com" target="blank"><img src="../../assets/linkedin.png" width="14px" height="16.8"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="second-div">
+                    <a routerLink="main"><div class="logo"><img src="../../assets/logo2.png"></div></a>
+                    <a  routerLink="cv-style" *ngIf="!shared.IsCreated && shared.AccountConnected.idAccount !== 0"><div class="menu">Create</div></a>
+                    <a  routerLink="main" *ngIf="shared.IsCreated && shared.AccountConnected.idAccount !== 0" (click)="this.shared.downloadPDF()"><div class="menu">Download your Cv</div></a>
+                    <a  routerLink="list"><div class="menu">CVs</div></a>
+                    <a routerLink="login" *ngIf="shared.AccountConnected.idAccount === 0"><div class="menu">Log in</div></a>
+                    <a routerLink="main" (click)="shared.loGout()"><div class="menu" *ngIf="shared.AccountConnected.idAccount !== 0">Log out</div></a>
+                    <div class="num"><img  src="../../assets/phone.png " width="45px">+216 20 013 490</div>
+        </div>
+
+
+</body>

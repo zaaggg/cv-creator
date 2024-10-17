@@ -1,0 +1,60 @@
+<div class="cv-3 item" id="download">        
+    <div class="top colorcv">
+        <p>{{_CreateService.userData.firstName}} {{_CreateService.userData.lastName}}</p>
+        <div class="profile"><p>{{_CreateService.userData.Profile}}</p></div>
+        <div class="birth"><p>{{_CreateService.userData.dob}}</p></div>
+    </div>
+    <div class="personel-info">
+        <div>
+            <img src="../../../assets/mail.png" alt="">
+            <p>{{_CreateService.userData.email}}</p>
+        </div>
+        <div>
+            <img src="../../../assets/phone2.png" alt="">
+            <p>+216 {{_CreateService.userData.phone}}</p>
+        </div>
+        <div>
+            <img src="../../../assets/gps.png" alt="">
+            <p>{{_CreateService.userData.address}} {{_CreateService.userData.PostalCode}}</p>
+        </div>
+        <div>
+            <p>{{_CreateService.userData.City}}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="bottom-cv-3">
+        <div class="skills">
+            <h1>Skills</h1>
+            <div>
+                <div class="colorcv">{{_CreateService.userData.skill1}}</div>
+                <div class="colorcv">{{_CreateService.userData.skill2}}</div>
+                <div class="colorcv">{{_CreateService.userData.skill3}}</div>
+                <div class="colorcv">{{_CreateService.userData.skill4}}</div>
+                <div class="colorcv">{{_CreateService.userData.skill5}}</div>
+            </div>
+        </div>
+        <div class="Professional summary">
+            <h1>Professional summary</h1>
+            <p>{{_CreateService.userData.summary}}</p>
+        </div>
+        <div class="Experience">
+            <h1>Experience</h1>
+            <p>{{_CreateService.userData.experience}}</p>
+        </div>
+        <div class="Education">
+            <h1>Education</h1>
+            <p>{{_CreateService.userData.education}}</p>
+        </div> 
+        <div class="skills">
+            <h1>Language</h1>
+            <div>
+                <div class="colorcv"><div><b>{{_CreateService.userData.language1}}</b></div><div class="type">{{ _CreateService.getRangeText(1) }}</div></div>
+                <div class="colorcv"><div><b>{{_CreateService.userData.language2}}</b></div><div class="type">{{ _CreateService.getRangeText(2) }}</div></div>
+                <div class="colorcv"><div><b>{{_CreateService.userData.language3}}</b></div><div class="type">{{ _CreateService.getRangeText(3) }}</div></div>
+                <div class="colorcv"><div><b>{{_CreateService.userData.language4}}</b></div><div class="type">{{ _CreateService.getRangeText(4) }}</div></div>
+                <div class="colorcv"><div><b>{{_CreateService.userData.language5}}</b></div><div class="type">{{ _CreateService.getRangeText(5) }}</div></div>
+            </div>
+        </div>
+
+    </div>
+</div>

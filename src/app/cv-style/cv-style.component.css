@@ -1,0 +1,188 @@
+*{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+.number {
+    position: absolute;
+    top:100px;
+    left:50%;
+    width: 40vw;
+    height: 10vh;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.number > div {
+    width: 12vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(169, 169, 169);
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+.number .active {
+    color: black;
+}
+
+.number > ._ {
+    width: 4vw;
+}
+
+.number > div .cercle{
+    background-color: rgb(169, 169, 169);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.number .active .cercle {
+    background-color: #104c98;
+}
+
+.style {
+    position: absolute;
+    width: 100%;
+    height: 250vh;
+    top: 35vh;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.style >div{
+    position: relative;
+    width: 90%;
+    height: 9%;
+    box-shadow: 0 0 10px 0 black;
+    overflow:hidden;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+
+
+.style> div::before {
+    content: 'Choose Template';
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    border-radius: 40%;
+    background-color: #104b98dc;
+    box-shadow: 0 0 10px 0 black;
+    cursor: pointer;
+    transition: all 1s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.style >div:hover::before {
+        display: flex;
+
+}
+
+.style >div:hover  {
+    overflow: visible;
+    height: 15%;
+    z-index: 9;
+    background: linear-gradient(180deg, rgba(2,0,36,0) 25%, rgba(0, 213, 255, 0.497) 100%);
+}
+
+.style .cv .img {
+    width:350px;
+    height: 500px;
+    position: absolute;
+    top: 20px;
+    z-index: 8;
+    transition: all .5s ease-out;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.style >div:hover .c1 .img,.style >div:hover .c3 .img, .style > div:hover .c5 .img,.style > div:hover .c7 .img,.style > div:hover .c9 .img {
+    transform:translate(40%,-30%) scale(.7);
+}
+
+.style >div:hover .c2 .img,.style > div:hover .c4 .img,.style > div:hover .c6 .img,.style > div:hover .c8 .img,.style > div:hover .c10 .img {
+    transform:translate(-40%,-30%) scale(.7);
+}
+
+.style .left .img {
+    right: 20px;
+}
+
+.style .right .img {
+    left: 20px;
+}
+
+
+.style .cv .title {
+    position: absolute;
+    top: 10%;
+    font-size: 30px;
+    font-weight: 800;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.767);
+}
+
+.style .cv .des {
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 800;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.767);
+}
+
+.style .left .title {
+    left: 5%;
+}
+
+.style .left .des {
+    left: 5%;
+}
+
+.style .right .title {
+    right: 5%;
+}
+
+.style .right .des {
+    right: 5%;
+}
+
+.footer {
+    position: relative;
+    top: 300vh;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    top: -10vh;
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(2,0,36,0) 25%, rgba(16,76,152,1) 100%);
+}

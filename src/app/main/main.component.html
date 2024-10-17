@@ -1,0 +1,70 @@
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="first">
+                <b>C</b>reate <b>Y</b>our<b><br>CV</b>
+            </div>
+            <P>Everything you need to create a professional CV in minutes</P>
+            <button *ngIf="this.shared.AccountConnected.idAccount ==0"[routerLink]="['/login']" class="create">Create My CV</button>
+            <button *ngIf="this.shared.AccountConnected.idAccount !=0"[routerLink]="['/cv-style']" class="create">Create My CV</button>
+            <img src="../../assets/cv image.png" >
+        </div>
+    </div>
+    <div class="second">
+        <div data-aos="zoom-out">
+            <div class="container" >
+                <h1>Impress emplo<b>yers</b> with your <b>CV</b></h1>
+                <p>Step-by-step guidance to <b>create a professional CV in</b> minutes.</p>
+                <button [routerLink]="['/cv-style']" class="create">Create Now</button>
+                <button [routerLink]="['/cv-style']" class="create">Create Now</button>
+                <button [routerLink]="['/cv-style']" class="create">Download your Cv</button>
+            </div>
+        </div>
+        <div class="rolling1" >
+            <div><img src="../../assets/cvs/cv1.jpg"></div>
+            <div><img src="../../assets/cvs/cv2.jpg"></div>
+            <div><img src="../../assets/cvs/cv3.jpg"></div>
+            <div><img src="../../assets/cvs/cv4.jpg"></div>
+            <div><img src="../../assets/cvs/cv5.jpg"></div>
+            <div><img src="../../assets/cvs/cv6.jpg"></div>
+        </div>
+        <div class="rolling2">
+            <div><img src="../../assets/cvs/cv6.jpg"></div>
+            <div><img src="../../assets/cvs/cv7.jpg"></div>
+            <div><img src="../../assets/cvs/cv8.jpg"></div>
+            <div><img src="../../assets/cvs/cv9.jpg"></div>
+            <div><img src="../../assets/cvs/cv10.jpg"></div>
+            <div><img src="../../assets/cvs/cv1.jpg"></div>
+        </div>
+    </div>
+    <div class="third">
+        <h1>How it works ?</h1>
+        <div data-aos="zoom-in">
+            <div class="box">
+                <div class="modele">
+                    <img src="../../assets/Modèles adaptés.png">
+                    <h2>Suitable models</h2>
+                    <p>Select the CV template that suits you.</p>
+                </div>
+                <div class="Pre-written">
+                    <img src="../../assets/pré-rédigés.png">
+                    <h2>Pre-written examples</h2>
+                    <p>Take advantage of pre-written content based on your business.</p>
+                </div>
+                <div class="download">
+                    <img src="../../assets/Télécharger.png">
+                    <h2>Download</h2>
+                    <p>Download, print and send your CV as much as you want.</p>
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+        <button *ngIf="this.shared.AccountConnected.idAccount ==0" [routerLink]="['/login']" class="create">Create Now</button>
+        <button *ngIf="this.shared.AccountConnected.idAccount !=0" [routerLink]="['/cv-style']" class="create">Create Now</button>
+        <button *ngIf="shared.IsCreated && shared.AccountConnected.idAccount !== 0" (click)="this.shared.downloadPDF()" class="create">Download your Cv</button>
+        </div>
+
+    </div>
+    <div class="footer"></div>
+</body>

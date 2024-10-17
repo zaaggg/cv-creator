@@ -1,0 +1,175 @@
+*{
+    --cv-color-1: #436975;
+    --cv-color-2:rgb(158, 60, 60);
+    --cv-color-3: rgb(188, 201, 65);
+    --cv-color-4: rgb(65, 158, 60);
+    --cv-color-5: rgb(54, 214, 158);
+    --cv-color-6: rgb(54, 185, 214);
+    --cv-color-7: rgb(59, 53, 149);
+    --cv-color-8: rgb(214, 54, 209);
+    --cv-color-9: rgb(214, 54, 142);
+    --cv-color-10: rgb(214, 54, 54);
+    --cv-color-11: rgb(251, 124, 124);
+    --cv-color-12: rgb(112, 105, 133);
+    box-sizing: border-box;
+}
+
+.item{
+    position: absolute;
+    height: 500px;
+    width: 380px;
+    display: inline-block;
+    transform: translate(10px,10px);
+}
+
+.cv-3 {
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 0 8px 0 black;
+    z-index: 999;
+    display: block;
+    overflow: hidden;
+    background-image: url(../../../assets/cvs/cv12new.jpg);
+    background-size: cover;
+
+
+}
+
+.cv-3 .top img {
+    width: 65px;
+    border-radius: 10px;
+    right: 15px;
+    top: 10px;
+    position: absolute;
+}
+
+
+.cv-3 .top {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 80px;
+    background-color: var(--cv-color-1);
+    background-image: url(../../../assets/texture.png) !important;
+    padding: 10px 15px;
+}
+
+.cv-3 .top p{
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    display: inline;
+}
+
+.cv-3 .top > div {
+    width: 100px;
+    margin: 0;
+}
+
+.cv-3 .top > div>p{
+    color: white;
+    font-size: 10px;
+    display: inline;
+}
+
+.cv-3 .personel-info {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 45px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cv-3 .personel-info >div {
+    width: 50% ;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.cv-3 .personel-info >div>img {
+    width: 15px ;
+    height: 15px;
+    
+}
+
+.cv-3 .personel-info >div>p {
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
+    
+}
+
+.bottom-cv-3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 75%;
+    width: 100%;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.bottom-cv-3 > div {
+    height: calc(100%/4);
+    width: 100%;
+}
+.bottom-cv-3 > div >h1 {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.bottom-cv-3 > div >p {
+    font-size: 8px;
+}
+
+.bottom-cv-3 .skills > div {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+
+}
+
+.bottom-cv-3 .skills > div >div {
+    width: 151px;
+    border-radius: 5px;
+    background-color: var(--cv-color-1);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.bottom-cv-3 .skills > div >div .type {
+    text-transform: lowercase;
+    font-size: 8px;
+
+}
+
+.cv-3 > hr{
+    width: 100%;
+    border:dashed 1px  #436975;
+    z-index: 99;
+    position: absolute;
+} 

@@ -1,0 +1,121 @@
+<body>
+    <div class="number">
+        <div class="1 " >
+            <div class="cercle">1</div>
+            <div class="para" id="retour1">Choose template</div>
+        </div>
+        <div class="_">-----</div>
+        <div class="2" >
+            <div class="cercle">2</div>
+            <div class="para" id="retour2">Choose color</div>
+        </div>
+        <div class="_">-----</div>
+        <div class="3 active" >
+            <div class="cercle">3</div>
+            <div class="para" id="retour3">Enter your details</div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container-left">
+            <h2>Personal informations</h2>
+            <div class="info">
+                <fieldset>
+                    <legend>Picture</legend>
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" accept="image/*" (change)="processFile($event)">
+                        <label for="fileInput" class="file-input-label">
+                            <span class="file-input-icon"></span>
+                            <span class="file-input-text">Select an Image</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>First Name</legend>
+                    <input type="text" maxlength="10" [(ngModel)]="_CreateService.userData.firstName">
+                </fieldset>
+                <fieldset>
+                    <legend>Last Name</legend>
+                    <input type="text" maxlength="10" [(ngModel)]="_CreateService.userData.lastName">
+                </fieldset>
+                <fieldset>
+                    <legend>E-mail</legend>
+                    <input class="full" maxlength="25" type="email" [(ngModel)]="_CreateService.userData.email">
+                </fieldset>
+                <fieldset>
+                    <legend>Profile Title</legend>
+                    <input class="full" maxlength="15" type="text" [(ngModel)]="_CreateService.userData.Profile" >
+                </fieldset>
+                <fieldset>
+                    <legend>Phone Number</legend>
+                    <input class="full" type="tel" maxlength="8" [(ngModel)]="_CreateService.userData.phone">
+                </fieldset>
+                <fieldset>
+                    <legend>Address</legend>
+                    <input class="full" maxlength="25" type="text" [(ngModel)]="_CreateService.userData.address">
+                </fieldset>
+                <fieldset>
+                    <legend>Postal Code</legend>
+                    <input type="number" maxlength="4" [(ngModel)]="_CreateService.userData.PostalCode">
+                </fieldset>
+                <fieldset>
+                    <legend>City</legend>
+                    <input type="text" maxlength="10" [(ngModel)]="_CreateService.userData.City">
+                </fieldset>
+                <fieldset>
+                    <legend>Date of birth</legend>
+                    <input type="date"  [(ngModel)]="_CreateService.userData.dob">
+                </fieldset><br>
+                <fieldset>
+                    <legend><b>Skills</b></legend>
+                    <div class="skills">
+                        <label><p>Skill 1</p><input type="checkbox"><input type="text" [(ngModel)]="_CreateService.userData.skill1"></label>
+                        <label><p>Skill 2</p><input type="checkbox"><input type="text" [(ngModel)]="_CreateService.userData.skill2"></label>
+                        <label><p>Skill 3</p><input type="checkbox"><input type="text" [(ngModel)]="_CreateService.userData.skill3"></label>
+                        <label><p>Skill 4</p><input type="checkbox"><input type="text" [(ngModel)]="_CreateService.userData.skill4"></label>
+                        <label><p>Skill 5</p><input type="checkbox"><input type="text" [(ngModel)]="_CreateService.userData.skill5"></label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><b>language</b></legend>
+                    <div class="language">
+                        <label><p>language 1</p><input type="checkbox"><div class="textrange"><input type="text"[(ngModel)]="_CreateService.userData.language1"><br><input type="range" size="1" min="0" max="5" step="1" [value]="_CreateService.range1" (input)="updateRange($event,1)"  ><p>{{ _CreateService.getRangeText(1) }}</p></div></label>
+                        <label><p>language 2</p><input type="checkbox"><div class="textrange"><input type="text"[(ngModel)]="_CreateService.userData.language2"><br><input type="range" size="1" min="0" max="5" step="1"  [value]="_CreateService.range2" (input)="updateRange($event,2)"  ><p>{{ _CreateService.getRangeText(2) }}</p></div></label>
+                        <label><p>language 3</p><input type="checkbox"><div class="textrange"><input type="text"[(ngModel)]="_CreateService.userData.language3"><br><input type="range" size="1" min="0" max="5" step="1" [value]="_CreateService.range3" (input)="updateRange($event,3)"  ><p>{{ _CreateService.getRangeText(3) }}</p></div></label>
+                        <label><p>language 4</p><input type="checkbox"><div class="textrange"><input type="text"[(ngModel)]="_CreateService.userData.language4"><br><input type="range" size="1" min="0" max="5" step="1" [value]="_CreateService.range4" (input)="updateRange($event,4)"  ><p>{{ _CreateService.getRangeText(4) }}</p></div></label>
+                        <label><p>language 5</p><input type="checkbox"><div class="textrange"><input type="text"[(ngModel)]="_CreateService.userData.language5"><br><input type="range" size="1" min="0" max="5" step="1" [value]="_CreateService.range5" (input)="updateRange($event,5)"  ><p>{{ _CreateService.getRangeText(5) }}</p></div></label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Professional summary</legend>
+                    <textarea class="full" cols="30" rows="5" maxlength="500" [(ngModel)]="_CreateService.userData.summary" maxlength="280"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Internships</legend>
+                    <textarea class="full" cols="30" rows="5" maxlength="500" [(ngModel)]="_CreateService.userData.experience" maxlength="280"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Education</legend>
+                    <textarea class="full" cols="30" rows="5" maxlength="300" [(ngModel)]="_CreateService.userData.education" maxlength="280"></textarea>
+                </fieldset>
+            <div class="download"  (click)="convertToPDF()" (click)="handleButtonClick()">Download</div>
+            </div>
+
+        </div>
+        <div class="container-right" >
+            <ng-container *ngIf="id === 0">
+                <div class="cv1" ></div>
+            </ng-container>
+            <ng-container *ngIf="id === 1">
+                <div class="cv2"></div>
+            </ng-container>
+            <ng-container *ngIf="id === 2">
+                <div class="cv3"></div>
+            </ng-container>
+              <ng-container *ngIf="id>2">
+                <div class="cv1"></div>
+            </ng-container>
+        </div>
+        
+    </div>
+
+</body>
